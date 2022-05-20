@@ -14,7 +14,7 @@ const sock = connection.makeWASocket();
 // Set limit to 5 message per 5 seconds
 const limitConfig = {
   window: 3.6e+6, // 1hr milisecond
-  limit: 1, // 3 sticker allowed per hr
+  limit: 10, // 3 sticker allowed per hr
   onLimitExceeded: async (ctx, next) => {
     try {
       await ctx.reply("rate limit exceeded deleting...");
